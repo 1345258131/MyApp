@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 double num = Double.parseDouble(str)/1.8+32;
                 CharSequence cs = String.valueOf(num);
                 out.setText(cs);//setText不能直接显示浮点数
+                //something
             }
         });
 
