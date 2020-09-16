@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
                 TextView out = findViewById(R.id.output);
                 EditText inp = findViewById(R.id.input);
                 String str = inp.getText().toString();
-                double num = Double.parseDouble(str)/1.8+32;
+                double num = Double.parseDouble(str)*1.8+32;
                 CharSequence cs = String.valueOf(num);
                 out.setText(cs);//setText不能直接显示浮点数
-                //something
+
             }
         });
 
