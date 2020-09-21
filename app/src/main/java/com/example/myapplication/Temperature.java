@@ -1,33 +1,37 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
+public class Temperature extends AppCompatActivity {
 
-import android.view.Menu;
-import android.view.MenuItem;
-
-
-public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.temperature);
+        Button button = findViewById(R.id.button);
 
-    }
-    public void jumpTemperature(View view) {   //跳转到温度转换页面
-        Intent intent = new Intent();
-        intent.setClass(MainActivity.this, Temperature.class);
-        startActivity(intent);
-    }
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-    public void jumpCounter(View view) { //跳转到计分器页面
-        Intent intent = new Intent();
-        intent.setClass(MainActivity.this, Counter.class);
-        startActivity(intent);
+                TextView out = findViewById(R.id.output);
+                EditText inp = findViewById(R.id.input);
+                String str = inp.getText().toString();
+                double num = Double.parseDouble(str)*1.8+32;
+                CharSequence cs = String.valueOf(num);
+                out.setText(cs);//setText不能直接显示浮点数
+
+            }
+        });
+
     }
 
     @Override
