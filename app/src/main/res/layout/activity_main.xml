@@ -29,4 +29,11 @@
         android:text="counter"
         android:textSize="30dp" />
 
+    <Button
+        android:id="@+id/exchange_rate"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:onClick="jumpExchane_rate"
+        android:text="EXCHANGE_RATE" />
+
 </LinearLayout>

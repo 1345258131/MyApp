@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void jumpExchane_rate(View view) { //跳转到汇率页面
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, Exchange_rate.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
