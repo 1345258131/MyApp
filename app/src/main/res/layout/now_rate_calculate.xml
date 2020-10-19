@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Detail">
+
+    <TextView
+        android:id="@+id/currence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/inputNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Input RMB"
+        android:gravity="left"
+        android:ems="10"
+
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/showResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#F44336"
+        android:textSize="20dp" />
+</LinearLayout>
